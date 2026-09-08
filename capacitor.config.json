@@ -1,0 +1,12 @@
+
+{
+  "appId": "com.smkmanbaululum.portal",
+  "appName": "PORTAL INFORMASI SMK MANBAUL ULUM",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "hardwareAccelerated": true
+  }
+}

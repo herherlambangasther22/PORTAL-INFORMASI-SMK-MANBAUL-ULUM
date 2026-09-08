@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/tjkt_logo.jpg" />
+    <link rel="apple-touch-icon" href="/tjkt_logo.jpg" />
+    <!-- Viewport dioptimalkan untuk layar TV 72" -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>PORTAL INFORMASI SMK MANBAUL ULUM</title>
+    <meta name="description" content="Smart TV Optimized Portal with Touch Gesture Support." />
+    <meta property="og:title" content="PORTAL INFORMASI SMK MANBAUL ULUM" />
+    <meta property="og:description" content="Smart TV Optimized Portal with Touch Gesture Support." />
+    <meta property="og:image" content="/tjkt_logo.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #e0e5ec;
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+
+      .scroll-container {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; 
+        scroll-behavior: smooth;
+        height: 100%;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e0e5ec;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d1d9e6;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c8d0db;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      .preview-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        overflow: hidden;
+        background-color: #d1d9e6;
+        border-radius: 1rem;
+        position: relative;
+        padding: 24px;
+      }
+      
+      .preview-document {
+        transform-origin: top center;
+        background-color: white;
+        box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      
+      @keyframes slide-up-fade {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-slide-up-fade {
+        animation: slide-up-fade 0.3s ease-out forwards;
+      }
+      
+      @keyframes scan-laser-vertical {
+        0% { top: 2%; opacity: 0.95; }
+        50% { top: 95%; opacity: 0.95; }
+        100% { top: 2%; opacity: 0.95; }
+      }
+      .animate-scan-laser-vertical {
+        position: absolute;
+        left: 0;
+        right: 0;
+        animation: scan-laser-vertical 2.2s ease-in-out infinite;
+      }
+      
+      button:active, .card-active:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+      }
+
+      /* --- PRINT STYLES --- */
+      @media print {
+        @page {
+          margin: 0;
+          size: auto; /* Membiarkan browser menyesuaikan, atau diset via JS */
+        }
+        
+        body {
+          background-color: white;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Kelas utilitas untuk memaksa background tercetak */
+        .print-exact {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Menyembunyikan elemen non-cetak */
+        .no-print, .no-print * {
+          display: none !important;
+        }
+
+        /* Reset layout untuk cetak */
+        #root {
+          display: block;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.15.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#e0e5ec]">
+    <script>
+      if (typeof process === 'undefined') {
+        window.process = { env: { NODE_ENV: 'production' } };
+      }
+    </script>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "PORTAL INFORMASI SMK MANBAUL ULUM",
+  "description": "Smart TV Optimized Portal with Touch Gesture Support.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "android": {
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.CAMERA"
+    ]
+  },
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
