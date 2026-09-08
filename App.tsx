@@ -23,7 +23,6 @@ import { generateUniqueStudentQr, generateUniqueStudentRfid, ensureAllStudentsHa
 import { getActiveSessions, clearSession } from './utils/authManager';
 import { compileDatabasePackage, saveAutoBackupToLocalStorage, getStoredAutoBackups } from './database_portalinformasi';
 import { LoadingSpinner } from './components/LoadingSpinner';
-import { AIChatbot } from './components/AIChatbot';
 import { DEFAULT_PORTAL_LOGO } from './constants';
 import { safeLocalStorageSet } from './utils';
 import { attendanceSync } from './utils/attendanceSync';
@@ -589,8 +588,6 @@ const App: React.FC = () => {
             {renderView()}
           </main>
       </div>
-
-      <AIChatbot appData={appData} activeSchool={activeSchool} />
     </div>
   );
 };

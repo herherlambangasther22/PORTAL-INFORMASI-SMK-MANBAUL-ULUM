@@ -422,7 +422,7 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
             {toastMessage && (
                 <div className={`p-4 rounded-2xl text-xs font-bold flex items-center justify-between gap-3 shadow-lg animate-scale-up ${
                     toastMessage.type === 'success' 
-                        ? 'bg-emerald-600 text-white' 
+                        ? 'bg-blue-600 text-white' 
                         : 'bg-rose-600 text-white'
                 }`}>
                     <div className="flex items-center gap-2">
@@ -446,10 +446,10 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                 </Card>
 
                 <Card className="p-4 flex flex-col justify-between">
-                    <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Akun Aktif</span>
+                    <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Akun Aktif</span>
                     <div className="flex items-baseline gap-1 mt-2">
-                        <span className="text-2xl font-black text-emerald-700">{stats.active}</span>
-                        <span className="text-xs text-emerald-600 font-semibold">Aktif</span>
+                        <span className="text-2xl font-black text-blue-700">{stats.active}</span>
+                        <span className="text-xs text-blue-600 font-semibold">Aktif</span>
                     </div>
                 </Card>
 
@@ -462,10 +462,10 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                 </Card>
 
                 <Card className="p-4 flex flex-col justify-between">
-                    <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Akses Scan Guru</span>
+                    <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Akses Scan Guru</span>
                     <div className="flex items-baseline gap-1 mt-2">
-                        <span className="text-2xl font-black text-emerald-700">{stats.hasTeacher}</span>
-                        <span className="text-xs text-emerald-600 font-semibold">Akun</span>
+                        <span className="text-2xl font-black text-blue-700">{stats.hasTeacher}</span>
+                        <span className="text-xs text-blue-600 font-semibold">Akun</span>
                     </div>
                 </Card>
 
@@ -617,7 +617,7 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                                                         : acc.role === 'operator'
                                                         ? 'bg-blue-100 text-blue-800 border border-blue-200'
                                                         : acc.role === 'teacher'
-                                                        ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                                                        ? 'bg-blue-100 text-blue-800 border border-blue-200'
                                                         : 'bg-amber-100 text-amber-800 border border-amber-200'
                                                 }`}>
                                                     {acc.role === 'admin' && 'Super Admin'}
@@ -636,7 +636,7 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                                                         </span>
                                                     )}
                                                     {(acc.role === 'admin' || acc.allowedModules.includes('teacher')) && (
-                                                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold">
+                                                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-bold">
                                                             <TeacherIcon className="w-3 h-3" /> Guru
                                                         </span>
                                                     )}
@@ -655,7 +655,7 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                                                     onClick={() => handleToggleActiveStatus(acc)}
                                                     className={`px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider cursor-pointer transition-all ${
                                                         acc.isActive 
-                                                            ? 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200' 
+                                                            ? 'bg-blue-100 text-blue-800 hover:bg-blue-200' 
                                                             : 'bg-slate-200 text-slate-600 hover:bg-slate-300'
                                                     }`}
                                                     title="Klik untuk mengubah status aktif/nonaktif"
@@ -738,16 +738,16 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                     ) : (
                         auditLogs.map((log) => (
                             <div key={log.id} className="py-2.5 flex items-center justify-between gap-4">
-                                <div className="flex items-center gap-3">
+                                 <div className="flex items-center gap-3">
                                     <span className={`w-2 h-2 rounded-full ${
-                                        log.status === 'SUCCESS' ? 'bg-emerald-500' : log.status === 'FAILED' ? 'bg-rose-500' : 'bg-slate-400'
+                                        log.status === 'SUCCESS' ? 'bg-blue-500' : log.status === 'FAILED' ? 'bg-rose-500' : 'bg-slate-400'
                                     }`} />
                                     <div>
                                         <div className="font-bold text-slate-800 flex items-center gap-2">
                                             <span>@{log.username}</span>
                                             <span className={`text-[9px] px-2 py-0.2 rounded font-black uppercase ${
                                                 log.status === 'SUCCESS' 
-                                                    ? 'bg-emerald-100 text-emerald-800' 
+                                                    ? 'bg-blue-100 text-blue-800' 
                                                     : log.status === 'FAILED'
                                                     ? 'bg-rose-100 text-rose-800'
                                                     : 'bg-slate-200 text-slate-700'
@@ -951,12 +951,12 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                                         </p>
                                     </div>
 
-                                    {/* Teacher Portal Module */}
+                                     {/* Teacher Portal Module */}
                                     <div 
                                         onClick={() => handleToggleModuleInForm('teacher')}
                                         className={`p-3 rounded-2xl border cursor-pointer select-none transition-all ${
                                             formModules.includes('teacher')
-                                                ? 'bg-emerald-50 border-emerald-400 text-emerald-900 shadow-sm'
+                                                ? 'bg-blue-50 border-blue-400 text-blue-900 shadow-sm'
                                                 : 'bg-white/40 border-slate-300 text-slate-600 opacity-60'
                                         }`}
                                     >
@@ -965,7 +965,7 @@ export const AccountManagementView: React.FC<AccountManagementViewProps> = ({
                                                 type="checkbox" 
                                                 checked={formModules.includes('teacher')} 
                                                 readOnly 
-                                                className="w-3.5 h-3.5 text-emerald-600 rounded" 
+                                                className="w-3.5 h-3.5 text-blue-600 rounded" 
                                             />
                                             <span className="font-black text-xs">Scan Guru</span>
                                         </div>

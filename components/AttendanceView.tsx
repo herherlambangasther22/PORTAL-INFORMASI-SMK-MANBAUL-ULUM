@@ -227,7 +227,7 @@ const ReportModal: React.FC<{
             <button 
               type="button" 
               onClick={handleDownloadMonthly} 
-              className="py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 bg-emerald-600 text-white shadow-md hover:bg-emerald-700 flex items-center gap-2 active:scale-95"
+              className="py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 bg-blue-600 text-white shadow-md hover:bg-blue-700 flex items-center gap-2 active:scale-95"
             >
               <DownloadIcon className="w-4 h-4" />
               <span>Unduh Excel Bulanan</span>
@@ -629,7 +629,7 @@ export const AttendanceView: React.FC<AttendanceViewProps> = ({
             <button
               type="button"
               onClick={handleExportDailyExcel}
-              className="py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 bg-emerald-600 text-white shadow-md hover:bg-emerald-700 flex items-center gap-2 active:scale-95 shimmer-active"
+              className="py-2.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 bg-blue-600 text-white shadow-md hover:bg-blue-700 flex items-center gap-2 active:scale-95 shimmer-active"
             >
               <ExcelIcon className="w-4 h-4" />
               <span>Export Laporan Excel</span>
@@ -926,7 +926,7 @@ export const AttendanceView: React.FC<AttendanceViewProps> = ({
               <button
                 type="button"
                 onClick={handleExportDailyExcel}
-                className="px-3 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer"
+                className="px-3 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider bg-blue-600 hover:bg-blue-700 text-white shadow-sm flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer"
               >
                 <DownloadIcon className="w-3.5 h-3.5" />
                 <span>Unduh Excel Harian</span>

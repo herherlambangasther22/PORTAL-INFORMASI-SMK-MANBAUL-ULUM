@@ -625,7 +625,7 @@ export const LearningPortalView: React.FC = () => {
               title="Impor Daftar Materi dari File JSON"
               className="px-4 py-3 rounded-2xl bg-[#e0e5ec] shadow-[3px_3px_6px_#d1d9e6,-3px_-3px_6px_#ffffff] hover:shadow-[inset_2px_2px_5px_#d1d9e6,inset_-2px_-2px_5px_#ffffff] text-slate-700 transition-all cursor-pointer flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider"
             >
-              <UploadIcon className="w-4 h-4 text-emerald-600" />
+              <UploadIcon className="w-4 h-4 text-blue-600" />
               <span className="hidden sm:inline">Restore</span>
               <input 
                 type="file" 
@@ -854,7 +854,7 @@ export const LearningPortalView: React.FC = () => {
                       className="p-2 rounded-xl text-slate-500 bg-[#e0e5ec] shadow-[2px_2px_4px_#d1d9e6,-2px_-2px_4px_#ffffff] hover:text-indigo-600 transition-all cursor-pointer"
                       title="Salin Tautan / Nama"
                     >
-                      {copiedId === item.id ? <CheckIcon className="w-3.5 h-3.5 text-emerald-600" /> : <LinkIcon className="w-3.5 h-3.5" />}
+                      {copiedId === item.id ? <CheckIcon className="w-3.5 h-3.5 text-blue-600" /> : <LinkIcon className="w-3.5 h-3.5" />}
                     </button>
 
                     <button
@@ -869,7 +869,7 @@ export const LearningPortalView: React.FC = () => {
                   {isUpload ? (
                     <button
                       onClick={() => handleDirectDownload(item)}
-                      className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+                      className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
                       title="Unduh File"
                     >
                       <DownloadIcon className="w-3.5 h-3.5" />
@@ -965,7 +965,7 @@ export const LearningPortalView: React.FC = () => {
               onClick={() => setFormSourceType('upload')}
               className={`py-2.5 px-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                 formSourceType === 'upload'
-                  ? 'bg-emerald-600 text-white shadow-md'
+                  ? 'bg-blue-600 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-800'
               }`}
             >
@@ -996,7 +996,7 @@ export const LearningPortalView: React.FC = () => {
                 accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.xls,.xlsx,.csv,.png,.jpg,.jpeg,.webp,.svg,.mp4,.webm,.zip,.rar,.7z"
               />
               <label htmlFor="learning-portal-file-input" className="cursor-pointer block">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-2 font-bold text-xl">
+                <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mx-auto mb-2 font-bold text-xl">
                   📁
                 </div>
                 <p className="text-sm font-bold text-slate-700">
@@ -1418,7 +1418,7 @@ export const LearningPortalView: React.FC = () => {
               {selectedItem.sourceType === 'upload' ? (
                 <button
                   onClick={() => handleDirectDownload(selectedItem)}
-                  className="py-3 px-6 rounded-xl bg-emerald-600 text-white font-bold text-xs uppercase shadow-md hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="py-3 px-6 rounded-xl bg-blue-600 text-white font-bold text-xs uppercase shadow-md hover:bg-blue-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <DownloadIcon className="w-4 h-4" /> Unduh File Sekarang
                 </button>

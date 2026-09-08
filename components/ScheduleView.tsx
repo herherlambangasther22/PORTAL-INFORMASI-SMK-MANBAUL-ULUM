@@ -487,7 +487,7 @@ STRUKTUR JSON YANG DIHARAPKAN:
         case 'ISTIRAHAT':
         case 'ISHOMA':
         case 'TADARUS':
-            return <span className="font-bold text-xs uppercase tracking-wider text-emerald-700">{entry.subjectCode}</span>;
+            return <span className="font-bold text-xs uppercase tracking-wider text-blue-700">{entry.subjectCode}</span>;
         case 'PD':
             return <span className="font-semibold text-xs text-indigo-700">PENGEMBANGAN DIRI (PD)</span>;
         default:
@@ -510,7 +510,7 @@ STRUKTUR JSON YANG DIHARAPKAN:
           <div className="flex flex-col gap-4 text-center">
               {isImporting ? (
                   <div className="flex flex-col items-center justify-center h-48">
-                      <LoadingSpinner className="w-12 h-12 text-green-700" />
+                      <LoadingSpinner className="w-12 h-12 text-blue-700" />
                       <p className="mt-4 text-slate-600 font-semibold">Memproses jadwal...</p>
                       <p className="text-sm text-slate-500">Mohon tunggu sejenak.</p>
                   </div>
@@ -518,7 +518,7 @@ STRUKTUR JSON YANG DIHARAPKAN:
                   <>
                       <p className="text-sm text-slate-500 mb-2">Unggah jadwal baru dalam format gambar (foto atau screenshot) atau file Excel.</p>
                       
-                      <label className="w-full text-center py-4 px-6 rounded-lg text-base font-semibold transition-all duration-300 bg-green-200 text-green-800 shadow-md hover:bg-green-300 cursor-pointer flex items-center justify-center gap-2 shimmer-active">
+                      <label className="w-full text-center py-4 px-6 rounded-lg text-base font-semibold transition-all duration-300 bg-blue-200 text-blue-800 shadow-md hover:bg-blue-300 cursor-pointer flex items-center justify-center gap-2 shimmer-active">
                           <UploadIcon className="w-8 h-8" />
                           <span>Impor dari Gambar (JPG/PNG)</span>
                           <input type="file" accept="image/jpeg, image/png" className="hidden" onChange={handleImageImport} />
@@ -688,21 +688,21 @@ STRUKTUR JSON YANG DIHARAPKAN:
                                 const isBreak = specialSubjects.includes(firstClassEntry?.subjectCode);
                                 
                                 return (
-                                    <tr key={index} className={`border-b border-slate-300/70 last:border-b-0 transition-colors ${isBreak ? 'bg-green-100/40 font-semibold' : 'odd:bg-white/50 even:bg-slate-50/50 hover:bg-green-50/70'}`}>
+                                    <tr key={index} className={`border-b border-slate-300/70 last:border-b-0 transition-colors ${isBreak ? 'bg-blue-100/30 font-semibold' : 'odd:bg-white/50 even:bg-slate-50/50 hover:bg-blue-50/50'}`}>
                                         <td className="p-1 sm:p-2 text-xs sm:text-sm whitespace-nowrap text-slate-600 border-r border-slate-300/70 align-middle print:text-black print:border-slate-400">
                                             {isEditing ? (
-                                                <input type="text" value={periodData.time} onChange={e => handlePeriodInfoChange(originalIndex, 'time', e.target.value)} className="w-24 text-center text-xs p-1 rounded-md bg-white/50 border border-slate-300 focus:outline-green-500 text-black"/>
+                                                <input type="text" value={periodData.time} onChange={e => handlePeriodInfoChange(originalIndex, 'time', e.target.value)} className="w-24 text-center text-xs p-1 rounded-md bg-white/50 border border-slate-300 focus:outline-blue-500 text-black"/>
                                             ) : period.time}
                                         </td>
                                         {!(isBreak && !isEditing) && (
                                             <td className="p-1 sm:p-2 text-xs sm:text-sm font-medium text-slate-700 border-r border-slate-300/70 align-middle print:text-black print:border-slate-400">
                                                 {isEditing ? (
-                                                    <input type="text" value={periodData.period} onChange={e => handlePeriodInfoChange(originalIndex, 'period', e.target.value)} className="w-20 text-center text-xs p-1 rounded-md bg-white/50 border border-slate-300 focus:outline-green-500 text-black"/>
+                                                    <input type="text" value={periodData.period} onChange={e => handlePeriodInfoChange(originalIndex, 'period', e.target.value)} className="w-20 text-center text-xs p-1 rounded-md bg-white/50 border border-slate-300 focus:outline-blue-500 text-black"/>
                                                 ) : period.period}
                                             </td>
                                         )}
                                         {isBreak && !isEditing ? (
-                                            <td colSpan={1 + classNames.length} className="p-2 sm:p-3 text-xs sm:text-sm text-green-700 font-bold uppercase tracking-[0.2em] align-middle print:text-black print:border-slate-400">
+                                            <td colSpan={1 + classNames.length} className="p-2 sm:p-3 text-xs sm:text-sm text-blue-700 font-bold uppercase tracking-[0.2em] align-middle print:text-black print:border-slate-400">
                                                 {getCellContent(firstClassEntry)}
                                             </td>
                                         ) : (
@@ -713,7 +713,7 @@ STRUKTUR JSON YANG DIHARAPKAN:
                                                 <td key={className} className={`p-1 sm:p-2 text-xs sm:text-sm border-r border-slate-300/70 last:border-r-0 align-middle print:text-black print:border-slate-400`}>
                                                     {isEditing ? (
                                                         <div className="flex flex-col gap-1 items-center">
-                                                            <select value={cellData?.subjectCode || ''} onChange={e => handleCellChange(originalIndex, className, 'subjectCode', e.target.value)} className="w-full text-xs p-1 rounded-md bg-white/80 border border-slate-300 focus:outline-green-500 text-black min-w-24">
+                                                            <select value={cellData?.subjectCode || ''} onChange={e => handleCellChange(originalIndex, className, 'subjectCode', e.target.value)} className="w-full text-xs p-1 rounded-md bg-white/80 border border-slate-300 focus:outline-blue-500 text-black min-w-24">
                                                                 <option value="">- Mapel -</option>
                                                                 <optgroup label="Kegiatan">
                                                                     {specialSubjects.map(s => <option key={s} value={s}>{s}</option>)}
@@ -723,7 +723,7 @@ STRUKTUR JSON YANG DIHARAPKAN:
                                                                 </optgroup>
                                                             </select>
                                                             {!isCellBreak && cellData?.subjectCode && (
-                                                                <select value={cellData?.teacherCode || ''} onChange={e => handleCellChange(originalIndex, className, 'teacherCode', e.target.value)} className="w-full text-xs p-1 rounded-md bg-white/80 border border-slate-300 focus:outline-green-500 text-black min-w-24">
+                                                                <select value={cellData?.teacherCode || ''} onChange={e => handleCellChange(originalIndex, className, 'teacherCode', e.target.value)} className="w-full text-xs p-1 rounded-md bg-white/80 border border-slate-300 focus:outline-blue-500 text-black min-w-24">
                                                                     <option value="">- Guru -</option>
                                                                     {teachers.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
                                                                 </select>

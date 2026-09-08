@@ -99,11 +99,11 @@ export const AttendanceScanResultModal: React.FC<AttendanceScanResultModalProps>
 
             {/* KETERANGAN STATUS ABSENSI */}
             {isSuccessOnTime && (
-                <div className="w-full bg-emerald-600 text-white rounded-xl p-3 flex items-center gap-2.5 shadow-sm text-left border border-emerald-700">
+                <div className="w-full bg-blue-600 text-white rounded-xl p-3 flex items-center gap-2.5 shadow-sm text-left border border-blue-700">
                     <CheckCircleIcon className="w-6 h-6 text-white flex-shrink-0" />
                     <div className="min-w-0 flex-1">
                         <p className="text-sm font-black tracking-wide uppercase">TEPAT WAKTU</p>
-                        <p className="text-[10px] text-emerald-100 font-medium leading-snug">
+                        <p className="text-[10px] text-blue-100 font-medium leading-snug">
                             Absensi berhasil dicatat sesuai jadwal pelajaran
                         </p>
                     </div>

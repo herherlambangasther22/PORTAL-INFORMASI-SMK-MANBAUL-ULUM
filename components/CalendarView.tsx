@@ -192,9 +192,9 @@ export const CalendarView: React.FC<CalendarViewProps> = ({ onMenuClick, notific
             let secondaryInfoClasses = 'text-slate-500 scale-90 origin-top-right';
 
             if (isSelected) {
-                dayCellClasses += ' bg-green-200 border-green-400';
-                dayNumberClasses += ' text-green-700';
-                secondaryInfoClasses += ' text-green-600 font-medium';
+                dayCellClasses += ' bg-blue-200 border-blue-400';
+                dayNumberClasses += ' text-blue-700';
+                secondaryInfoClasses += ' text-blue-600 font-medium';
             } else if (isToday) {
                  dayCellClasses += ' bg-blue-100 border-blue-300';
                  dayNumberClasses += ' text-blue-600';
@@ -364,7 +364,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({ onMenuClick, notific
                                         <div key={eventKey} className="relative transition-all duration-300 rounded-md">
                                             <div className={`absolute -left-[22px] top-1.5 w-3 h-3 rounded-full ${eventColorClasses[event.color].dot} border-2 border-[#e0e5ec]`}></div>
                                             <div onClick={() => setExpandedEventKey(isExpanded ? null : eventKey)} className="cursor-pointer group">
-                                                <p className={`font-semibold text-xs leading-snug ${isSelectedDayEvent ? 'text-green-700' : 'text-slate-800 group-hover:text-blue-600'}`}>
+                                                <p className={`font-semibold text-xs leading-snug ${isSelectedDayEvent ? 'text-blue-700' : 'text-slate-800 group-hover:text-blue-600'}`}>
                                                     <span className="font-bold opacity-70 mr-1">
                                                         {eventDate.getDate()}:
                                                     </span>

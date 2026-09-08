@@ -664,7 +664,7 @@ export const StudentCard: React.FC<StudentCardProps> = ({
                                         <td className="text-center font-bold">:</td>
                                         <td className="text-[7px] text-slate-900 font-medium truncate">
                                             {student.rfidCode ? <span className="font-mono font-bold">{rfidText}</span> : '-'} 
-                                            {(student.faceRegistered || !!student.faceDataUrl) && <span className="ml-1 text-emerald-800 font-bold">✓ Wajah</span>}
+                                            {(student.faceRegistered || !!student.faceDataUrl) && <span className="ml-1 text-blue-800 font-bold">✓ Wajah</span>}
                                         </td>
                                     </tr>
                                     <tr>

@@ -52,7 +52,7 @@ export const GradesView: React.FC<GradesViewProps> = ({ grades, students, school
 
     const assessmentName = selectedAssessment.toUpperCase();
     const dataKey = selectedAssessment;
-    const barColor = selectedAssessment === 'pts' ? '#4f46e5' : '#16a34a'; // Indigo for PTS, Green for PAS
+    const barColor = selectedAssessment === 'pts' ? '#4f46e5' : '#2563eb'; // Indigo for PTS, Blue for PAS
     const chartHeight = Math.max(400, filteredGrades.length * 40); // 40px per student, min 400px
 
   return (
@@ -72,7 +72,7 @@ export const GradesView: React.FC<GradesViewProps> = ({ grades, students, school
                     </div>
                 </div>
                 <div className="flex items-center justify-end flex-wrap gap-4 w-full sm:w-auto">
-                    <label className="py-1.5 px-3 text-xs sm:text-sm rounded-lg font-semibold transition-all duration-300 bg-green-600 text-white shadow-md hover:bg-green-700 cursor-pointer flex items-center gap-2 shimmer-active">
+                    <label className="py-1.5 px-3 text-xs sm:text-sm rounded-lg font-semibold transition-all duration-300 bg-blue-600 text-white shadow-md hover:bg-blue-700 cursor-pointer flex items-center gap-2 shimmer-active">
                         <UploadIcon className="w-5 h-5"/>
                         <span>Impor Nilai</span>
                         <input
@@ -97,7 +97,7 @@ export const GradesView: React.FC<GradesViewProps> = ({ grades, students, school
                             key={className}
                             onClick={() => setSelectedClass(className)}
                             className={`py-1 px-3 text-xs sm:text-sm rounded-lg font-semibold transition-all duration-300 ${
-                                selectedClass === className ? 'bg-green-600 text-white shadow-md shimmer-active' : 'text-slate-600'
+                                selectedClass === className ? 'bg-blue-600 text-white shadow-md shimmer-active' : 'text-slate-600'
                             }`}
                         >
                             {className === 'Semua' ? 'Semua' : className}
@@ -112,7 +112,7 @@ export const GradesView: React.FC<GradesViewProps> = ({ grades, students, school
                         type="button"
                         onClick={() => setSelectedAssessment('pts')}
                         className={`py-1 px-3 text-xs sm:text-sm rounded-lg font-semibold transition-all duration-300 ${
-                            selectedAssessment === 'pts' ? 'bg-green-600 text-white shadow-md shimmer-active' : 'text-slate-600'
+                            selectedAssessment === 'pts' ? 'bg-blue-600 text-white shadow-md shimmer-active' : 'text-slate-600'
                         }`}
                     >
                         PTS
@@ -121,7 +121,7 @@ export const GradesView: React.FC<GradesViewProps> = ({ grades, students, school
                         type="button"
                         onClick={() => setSelectedAssessment('pas')}
                         className={`py-1 px-3 text-xs sm:text-sm rounded-lg font-semibold transition-all duration-300 ${
-                            selectedAssessment === 'pas' ? 'bg-green-600 text-white shadow-md shimmer-active' : 'text-slate-600'
+                            selectedAssessment === 'pas' ? 'bg-blue-600 text-white shadow-md shimmer-active' : 'text-slate-600'
                         }`}
                     >
                         PAS

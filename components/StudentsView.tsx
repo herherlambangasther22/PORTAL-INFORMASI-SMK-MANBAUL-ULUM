@@ -709,10 +709,10 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                         <div className="text-center pt-20 pb-4 px-4">
                              <h3 className="text-xl sm:text-2xl font-bold text-slate-800">{detailStudent.fullName}</h3>
                              <div className="flex items-center justify-center gap-2 mt-2">
-                                <p className="text-slate-500 font-semibold bg-green-200/60 px-3 py-1 rounded-full text-xs sm:text-sm">Kelas {detailStudent.class}</p>
+                                <p className="text-slate-500 font-semibold bg-blue-200/60 px-3 py-1 rounded-full text-xs sm:text-sm">Kelas {detailStudent.class}</p>
                                 {detailStudent.faceDataUrl ? (
-                                    <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-300">
-                                        <FaceScanIcon className="w-3.5 h-3.5 text-emerald-600"/> Biometrik Wajah Aktif
+                                    <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold border border-blue-300">
+                                        <FaceScanIcon className="w-3.5 h-3.5 text-blue-600"/> Biometrik Wajah Aktif
                                     </span>
                                 ) : (
                                     <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold border border-amber-300">
@@ -754,7 +754,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                             {/* Section 3: Data Orang Tua */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 className="font-black text-emerald-600 mb-2 text-xs uppercase tracking-widest border-b border-emerald-200 pb-1">Data Ayah</h4>
+                                    <h4 className="font-black text-blue-600 mb-2 text-xs uppercase tracking-widest border-b border-blue-200 pb-1">Data Ayah</h4>
                                     <div className="space-y-0.5">
                                         <DetailRow label="Nama" value={detailStudent.fatherName} />
                                         <DetailRow label="NIK" value={detailStudent.fatherNik} />
@@ -790,7 +790,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                         </div>
                                     </div>
                                     {detailStudent.faceDataUrl ? (
-                                        <span className="text-[9px] bg-emerald-100 text-emerald-800 font-black px-2.5 py-0.5 rounded-full uppercase border border-emerald-300">
+                                        <span className="text-[9px] bg-blue-100 text-blue-800 font-black px-2.5 py-0.5 rounded-full uppercase border border-blue-300">
                                             ✓ Terdaftar
                                         </span>
                                     ) : (
@@ -817,7 +817,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                             <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block">Status Biometrik:</span>
                                             {detailStudent.faceDataUrl ? (
                                                 <p className="text-xs font-bold text-slate-800">
-                                                    Wajah siswa telah tersimpan. Terdaftar pada: <span className="font-mono text-emerald-700">{detailStudent.faceRegisteredAt || 'Master Database'}</span>
+                                                    Wajah siswa telah tersimpan. Terdaftar pada: <span className="font-mono text-blue-700">{detailStudent.faceRegisteredAt || 'Master Database'}</span>
                                                 </p>
                                             ) : (
                                                 <p className="text-xs text-slate-600 font-medium">
@@ -864,33 +864,33 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                             </div>
 
                             {/* Section 5: Identitas Digital, QR Code & RFID Absensi */}
-                            <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-amber-50 p-4 rounded-2xl border border-emerald-200">
-                                <div className="flex items-center justify-between mb-3 border-b border-emerald-200/60 pb-2">
+                            <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-amber-50 p-4 rounded-2xl border border-blue-200">
+                                <div className="flex items-center justify-between mb-3 border-b border-blue-200/60 pb-2">
                                     <div className="flex items-center gap-2">
-                                        <div className="p-1.5 rounded-lg bg-emerald-600 text-white">
+                                        <div className="p-1.5 rounded-lg bg-blue-600 text-white">
                                             <QrCodeIcon className="w-4 h-4" />
                                         </div>
                                         <div>
-                                            <h4 className="font-black text-emerald-800 text-xs uppercase tracking-wider">Identitas Digital, QR & RFID Absensi</h4>
-                                            <p className="text-[10px] text-emerald-600 font-semibold">Terenkripsi Unik • Integrated RFID Scanner • Kiosk Ready</p>
+                                            <h4 className="font-black text-blue-800 text-xs uppercase tracking-wider">Identitas Digital, QR & RFID Absensi</h4>
+                                            <p className="text-[10px] text-blue-600 font-semibold">Terenkripsi Unik • Integrated RFID Scanner • Kiosk Ready</p>
                                         </div>
                                     </div>
-                                    <span className="text-[9px] bg-emerald-200/70 text-emerald-800 font-bold px-2 py-0.5 rounded-full uppercase">100% Valid</span>
+                                    <span className="text-[9px] bg-blue-200/70 text-blue-800 font-bold px-2 py-0.5 rounded-full uppercase">100% Valid</span>
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row items-center gap-4">
-                                    <div className="w-28 h-28 bg-white p-2 rounded-xl shadow-md border border-emerald-100 flex items-center justify-center flex-shrink-0">
+                                    <div className="w-28 h-28 bg-white p-2 rounded-xl shadow-md border border-blue-100 flex items-center justify-center flex-shrink-0">
                                         {detailQrDataUrl ? (
                                             <img src={detailQrDataUrl} alt="QR Code Siswa" className="w-full h-full object-contain" />
                                         ) : (
-                                            <LoadingSpinner className="w-6 h-6 text-emerald-600" />
+                                            <LoadingSpinner className="w-6 h-6 text-blue-600" />
                                         )}
                                     </div>
                                     <div className="flex-1 min-w-0 text-center sm:text-left space-y-2">
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                             <div>
                                                 <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block">Token Unik QR:</span>
-                                                <code className="text-xs font-mono font-bold bg-white px-2.5 py-1 rounded-lg border border-emerald-200 text-emerald-900 select-all block truncate mt-0.5">
+                                                <code className="text-xs font-mono font-bold bg-white px-2.5 py-1 rounded-lg border border-blue-200 text-blue-900 select-all block truncate mt-0.5">
                                                     {detailStudent.qrCode || generateUniqueStudentQr(detailStudent, students)}
                                                 </code>
                                             </div>
@@ -904,7 +904,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                         <div className="flex flex-wrap gap-2 justify-center sm:justify-start pt-1">
                                             <button 
                                                 onClick={() => handleCopyQrToken(detailStudent.qrCode || generateUniqueStudentQr(detailStudent, students))}
-                                                className="px-3 py-1.5 bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-300 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1 active:scale-95"
+                                                className="px-3 py-1.5 bg-white hover:bg-blue-50 text-blue-700 border border-blue-300 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1 active:scale-95"
                                             >
                                                 {isCopiedQr ? '✓ Token Tersalin' : 'Salin Token QR'}
                                             </button>
@@ -919,7 +919,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                             {detailQrDataUrl && (
                                                 <button 
                                                     onClick={() => handleDownloadQrImage(detailStudent, detailQrDataUrl)}
-                                                    className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1 active:scale-95"
+                                                    className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs flex items-center gap-1 active:scale-95"
                                                 >
                                                     <DownloadIcon className="w-3.5 h-3.5" /> Unduh QR (PNG)
                                                 </button>
@@ -931,7 +931,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
 
                             {/* Action Button */}
                             <div className="pt-2 flex items-center justify-center gap-3">
-                                <button onClick={() => openQrModal(detailStudent)} className="py-2.5 px-6 rounded-xl bg-emerald-600 text-white font-bold text-sm shadow-md hover:bg-emerald-700 transition-all flex items-center gap-2 active:scale-95">
+                                <button onClick={() => openQrModal(detailStudent)} className="py-2.5 px-6 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-md hover:bg-blue-700 transition-all flex items-center gap-2 active:scale-95">
                                     <QrCodeIcon className="w-4 h-4"/> Pratinjau QR Digital
                                 </button>
                                 <button onClick={() => { setDetailStudent(null); setCardStudent(detailStudent); }} className="py-2.5 px-6 rounded-xl bg-slate-800 text-white font-bold text-sm shadow-lg hover:bg-slate-700 transition-all flex items-center gap-2 active:scale-95">
@@ -947,22 +947,22 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
             <Modal isOpen={!!qrModalStudent} onClose={() => setQrModalStudent(null)} title={`QR Code Absensi: ${qrModalStudent?.fullName || ''}`} size="md">
                 {qrModalStudent && (
                     <div className="p-4 flex flex-col items-center text-center space-y-4 animate-scale-up">
-                        <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center border border-emerald-300 shadow-inner">
+                        <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center border border-blue-300 shadow-inner">
                             <QrCodeIcon className="w-7 h-7" />
                         </div>
 
                         <div>
                             <h3 className="text-lg font-black text-slate-800 uppercase tracking-tight">{qrModalStudent.fullName}</h3>
-                            <p className="text-xs font-bold text-emerald-700 mt-0.5">Kelas {qrModalStudent.class} • NIS: {qrModalStudent.nis || '-'}</p>
+                            <p className="text-xs font-bold text-blue-700 mt-0.5">Kelas {qrModalStudent.class} • NIS: {qrModalStudent.nis || '-'}</p>
                         </div>
 
                         {/* High Res QR Frame */}
-                        <div className="p-4 bg-white rounded-2xl border-2 border-emerald-300 shadow-xl relative group">
+                        <div className="p-4 bg-white rounded-2xl border-2 border-blue-300 shadow-xl relative group">
                             {qrModalDataUrl ? (
                                 <img src={qrModalDataUrl} alt="QR Code Siswa" className="w-56 h-56 object-contain" />
                             ) : (
                                 <div className="w-56 h-56 flex items-center justify-center">
-                                    <LoadingSpinner className="w-8 h-8 text-emerald-600" />
+                                    <LoadingSpinner className="w-8 h-8 text-blue-600" />
                                 </div>
                             )}
                             <div className="mt-2 text-center">
@@ -989,7 +989,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                             </button>
                             <button
                                 onClick={() => handleDownloadQrImage(qrModalStudent, qrModalDataUrl)}
-                                className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 active:scale-95"
+                                className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 active:scale-95"
                             >
                                 <DownloadIcon className="w-4 h-4" /> Unduh QR (.PNG)
                             </button>
@@ -1050,7 +1050,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                 onClick={handlePrintCard}
                                 className="py-2.5 px-5 rounded-xl text-xs font-black transition-all bg-slate-900 text-white shadow-md hover:bg-black flex items-center gap-2 cursor-pointer active:scale-95"
                             >
-                                <QrCodeIcon className="w-4 h-4 text-emerald-400" />
+                                <QrCodeIcon className="w-4 h-4 text-blue-400" />
                                 <span>Cetak Kartu Pelajar ({cardPrintTab === 'both' ? 'Depan & Belakang' : cardPrintTab === 'front' ? 'Depan' : 'Belakang'})</span>
                             </button>
                         </div>
@@ -1154,7 +1154,7 @@ export const StudentsView: React.FC<StudentsViewProps> = ({ students, schoolType
                                                     </div>
                                                 </div>
                                                 <div className="flex justify-end gap-1.5 mt-2.5 pt-2 border-t border-slate-100">
-                                                    <button type="button" onClick={(e) => { e.stopPropagation(); openQrModal(student); }} className="p-1.5 rounded-lg bg-emerald-100 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all shadow-sm" title="Lihat & Download QR Code Siswa"><QrCodeIcon className="w-3.5 h-3.5" /></button>
+                                                    <button type="button" onClick={(e) => { e.stopPropagation(); openQrModal(student); }} className="p-1.5 rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-600 hover:text-white transition-all shadow-sm" title="Lihat & Download QR Code Siswa"><QrCodeIcon className="w-3.5 h-3.5" /></button>
                                                     <button type="button" onClick={(e) => { e.stopPropagation(); startCamera(student); }} className="p-1.5 rounded-lg bg-indigo-100 text-indigo-600 hover:bg-indigo-600 hover:text-white transition-all shadow-sm" title="Scan Wajah"><CameraIcon className="w-3.5 h-3.5" /></button>
                                                     <button type="button" onClick={(e) => { e.stopPropagation(); setCardStudent(student); }} className="p-1.5 rounded-lg bg-amber-100 text-amber-700 hover:bg-amber-600 hover:text-white transition-all shadow-sm" title="Kartu Pelajar"><UserIcon className="w-3.5 h-3.5" /></button>
                                                     <button type="button" onClick={(e) => { e.stopPropagation(); openEditModal(student); }} className="p-1.5 rounded-lg bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-sm" title="Edit Data"><EditIcon className="w-3.5 h-3.5" /></button>
