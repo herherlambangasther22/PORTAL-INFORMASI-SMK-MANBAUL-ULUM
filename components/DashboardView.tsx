@@ -240,9 +240,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ appData, attendanc
                     <h3 className="text-sm font-black uppercase tracking-tighter">{statusConfig[status].text}</h3>
                 </div>
                 <p className="font-black text-2xl sm:text-3xl text-slate-800 mb-3 tracking-tighter leading-none">{currentPeriod.time}</p>
-                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 w-full">
+                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center lg:items-stretch gap-3 w-full">
                     {isBreak ? (
-                         <div className="col-span-full">
+                         <div className="col-span-full w-full">
                             <Card type="pressed" className="py-6 px-6 bg-blue-50/50">
                                 <div className="flex flex-col items-center justify-center gap-1">
                                     <div className="flex items-center gap-3">
@@ -263,12 +263,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ appData, attendanc
                             const subjectName = subjectMap.get(entry.subjectCode) || entry.subjectCode;
                             const teacherName = entry.teacherCode ? teacherMap.get(entry.teacherCode) : 'Guru Piket';
                             return (
-                                <Card key={className} type="pressed" className="p-3 flex flex-col items-center gap-1.5 border-t-[3px] border-blue-900 shadow-sm bg-white/40">
-                                    <div className="px-2 py-0.5 text-[9px] font-black text-white bg-slate-800 rounded-full">KLS {className}</div>
+                                <Card key={className} type="pressed" className="p-3 flex flex-col items-center justify-between gap-1.5 border-t-[3px] border-blue-900 shadow-sm bg-white/40 lg:w-48 lg:max-w-[200px] lg:flex-1">
+                                    <div className="px-2.5 py-0.5 text-[9px] font-black text-white bg-slate-800 rounded-full">KLS {className}</div>
                                     <div className={`p-2 rounded-lg bg-white/60 shadow-sm`}>
                                         <SubjectIconComponent className={`w-6 h-6 ${subjectColor}`} />
                                     </div>
-                                    <div className="w-full overflow-hidden">
+                                    <div className="w-full overflow-hidden text-center">
                                         <p className="font-black text-[11px] text-slate-800 truncate leading-tight uppercase">{subjectName}</p>
                                         <p className="text-[8px] font-bold text-slate-400 truncate mt-0.5 uppercase">{teacherName}</p>
                                     </div>

@@ -491,15 +491,6 @@ const App: React.FC = () => {
   }
   
   if (suiteMode === 'teacher') {
-    if (!activeSessions.teacher) {
-      return (
-        <LoginModal 
-          targetModule="teacher" 
-          portalLogo={portalLogo} 
-          onSuccess={(session) => setActiveSessions(prev => ({ ...prev, teacher: session }))} 
-        />
-      );
-    }
     return (
       <TeacherPortalView 
         appData={appData} 
@@ -524,15 +515,6 @@ const App: React.FC = () => {
   }
 
   if (suiteMode === 'student') {
-    if (!activeSessions.student) {
-      return (
-        <LoginModal 
-          targetModule="student" 
-          portalLogo={portalLogo} 
-          onSuccess={(session) => setActiveSessions(prev => ({ ...prev, student: session }))} 
-        />
-      );
-    }
     return (
       <StudentKioskView 
         appData={appData} 
